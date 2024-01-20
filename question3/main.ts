@@ -69,6 +69,8 @@ export class Connect4 {
       const newRow = row + i * rowIncrement;
       const newCol = col + i * colIncrement;
       //check if the chip belongs to the player (1 or 2)
+      //need to check if valid move
+      //TODO if move is "out of bounds" should not proceed or send false
       if (this.grid[newCol][newRow] === player) {
         count++;
       } else {
